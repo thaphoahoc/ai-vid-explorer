@@ -1,11 +1,17 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ChatSidebar from "@/components/ChatSidebar";
+import DisplayPanel from "@/components/DisplayPanel";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="h-screen flex bg-background overflow-hidden">
+      {/* Left Column - Chat Sidebar (30% width) */}
+      <div className="w-[30%] min-w-[320px] max-w-[480px]">
+        <ChatSidebar />
+      </div>
+      
+      {/* Right Column - Display Panel (70% width) */}
+      <div className="flex-1">
+        <DisplayPanel />
       </div>
     </div>
   );
